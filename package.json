@@ -1,0 +1,46 @@
+{
+  "name": "node-download-benchmark",
+  "version": "1.0.0",
+  "description": "Sequential HTTPS download benchmark for Node.js (TypeScript)",
+  "type": "module",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist coverage"
+  },
+  "keywords": [
+    "benchmark",
+    "download",
+    "http",
+    "https",
+    "performance",
+    "enterprise",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "tsx": "^4.19.2",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "pino": "^10.4.0",
+    "pino-pretty": "^13.2.0"
+  }
+}
